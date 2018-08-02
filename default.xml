@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<page xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<body>
+<referenceContainer name="header.container">    
+            <block class="Magento\Framework\View\Element\Template" name="headers" template="Magento_Theme::html/header.phtml"/>
+</referenceContainer>
+        <!-- removing default title  -->
+<referenceBlock name="page.main.title" remove="true"/>
+
+<referenceContainer name="content" label="Main Content Top" remove="true"/>
+
+<referenceContainer name="main.content">
+    <block class="Magento\Framework\View\Element\Template" name="banner" template="Magento_Theme::html/banner.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="indexnew" template="Magento_Theme::html/index.phtml"/>
+</referenceContainer>
+
+<referenceBlock name ="store.menu" remove="true"/>        
+<referenceBlock name ="report.bugs" remove="true"/> 
+<referenceBlock name ="form.subscribe" remove="true"/> 
+
+<referenceContainer name="header-wrapper" remove="true"/>
+
+    <!-- Remover default top links for my account and menu -->
+<referenceBlock name="top.links" remove="true"/>
+<!-- remove  Privacy and Cookie PolicySearch TermsOrders 
+     and ReturnsAdvanced SearchContact Uslinks-->
+<referenceBlock name="footer_links" remove="true" />
+<referenceBlock name ="copyright" remove="true"/>   
+<!-- <referenceContainer name="footer-container" remove="true"/> -->
+<referenceContainer name="footer-container">
+    <block class="Magento\Framework\View\Element\Template" name="footers" 
+        template="Magento_Theme::html/footer.phtml"/>
+           
+</referenceContainer>
+
+</body>
+</page>
